@@ -73,7 +73,7 @@
       yourFig: "Your figure",
       retry: "Retry this question",
       retrySoon: "Rewarded retry · not available yet",
-      retryNote: "One retry is reserved for a real rewarded ad, before the answer is shown. This page does not play an ad, and it does not give the retry.",
+      retryNote: "A retry later needs a real rewarded ad. It is off for now.",
       retryUsed: "Retry already used on this question.",
       retryPass: "An ad-free pass would not add a retry.",
       trueValue: "True value",
@@ -138,7 +138,7 @@
       yourFig: "你的数字",
       retry: "重估这一题",
       retrySoon: "看广告后重估 · 还没开放",
-      retryNote: "答案出来之前，可以留一次重估，留给以后真正的激励广告。这一版不播放广告，也不会把重估送你。",
+      retryNote: "重估以后要用真实广告才开放，现在没有。",
       retryUsed: "这一题已经用过重估。",
       retryPass: "免广告通行证不附带重估。",
       trueValue: "真实数字",
@@ -429,6 +429,11 @@
     bindRail();
   }
 
+  function notesLink() {
+    var c = t();
+    return '<button class="btn textish" type="button" data-act="about">' + esc(c.notes) + '</button>';
+  }
+
   function topbar() {
     var c = t();
     return (
@@ -673,6 +678,7 @@
         '<div class="stack">' +
           '<button class="btn primary" id="primary-action" type="button" data-act="lock"' + (draftN ? "" : " disabled") + '>' + esc(c.lock) + '</button>' +
         '</div>' +
+        notesLink() +
       '</div>'
     );
   }
@@ -894,8 +900,11 @@
       return;
     }
     if (act === "home") {
-      screen = (dayRecord() ? "result" : "landing");
-      if (!dayRecord()) screen = "landing";
+      if (dayRecord()) screen = "result";
+      else {
+        ensureProgress();
+        screen = "play";
+      }
       paint();
       return;
     }
@@ -1154,5 +1163,9 @@
 
   var rec0 = dayRecord();
   if (rec0) screen = "result";
+  else {
+    ensureProgress();
+    screen = "play";
+  }
   paint();
 })();

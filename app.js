@@ -50,14 +50,14 @@
       play: "Play today's five",
       resume: "Continue today's five",
       see: "See today's result",
-      lock: "Lock in this estimate",
+      lock: "That's my guess",
       show: "Show the true value",
       next: "Next question",
       result: "See today's result",
       copy: "Copy result",
       copied: "Copied",
       save: "Save image",
-      notes: "Scoring and notes",
+      notes: "How to play",
       back: "Back",
       streak: "Streak",
       streakNone: "No streak yet",
@@ -66,8 +66,8 @@
       same: "Five estimates. The same five everywhere.",
       reset: "A new set at 00:00 UTC, which is 08:00 in Asia/Shanghai.",
       of: function (i) { return (i + 1) + " of 5"; },
-      placeholder: "Type a number",
-      scaleHint: "The scale speeds up as you go right. The number in the box is the one that counts.",
+      placeholder: "—",
+      scaleHint: "Drag the rail to estimate. The number is what counts.",
       badNumber: "Enter a number greater than zero.",
       locked: "Locked",
       yourFig: "Your figure",
@@ -85,7 +85,7 @@
       source: "Source",
       today: "Today",
       avg: function (f) { return f + "× off, on average"; },
-      legend: "Taller mark, closer guess. The block above is the share card. It leaves the answers out.",
+      legend: "A fuller rail means a closer guess. The card above is what you can share. It leaves the answers out.",
       yourFive: "The five answers, for you",
       tomorrow: "Tomorrow's five arrive at 00:00 UTC (08:00 in Shanghai).",
       played: "You already finished today's official round.",
@@ -97,12 +97,12 @@
         if (info.cycle <= 0) return "Set " + n;
         return "Cycle " + (info.cycle + 1) + " · set " + n;
       },
-      aboutTitle: "How OffBy scores",
+      aboutTitle: "How to play OffBy",
       aboutBody: [
         "Everyone, everywhere, gets the same five questions for a UTC date. The set changes at 00:00 UTC, which is 08:00 in Asia/Shanghai. Prepared sets start on 20 November 2026 and then repeat in order.",
         "Each question is worth 20 points. The round is out of 100. Points follow how many times off you were: exact is 20, twice as high or low is 14, ten times off or more is 0.",
         "The first finish of the UTC day is the official round and the only one that counts for the streak. The streak lives in this browser. There is no account.",
-        "The share card shows the date, the score, the average miss, and five marks. Taller means closer. It does not include the answers.",
+        "The share card shows the date, the score, the average miss, and five rails. A fuller rail means a closer guess. It does not include the answers.",
         "A retry before the reveal, and a one-day streak freeze, are wired for a future rewarded ad. They stay off until a real ad callback says the reward was earned. This version does not pretend an ad played.",
         "An ad-free pass is not for sale. Nothing on this page takes payment. A future pass would turn ads off. It would not add extra guesses."
       ]
@@ -115,14 +115,14 @@
       play: "开始今天的五题",
       resume: "继续今天的五题",
       see: "查看今天的成绩",
-      lock: "锁定这个估计",
+      lock: "就这个",
       show: "看真实数字",
       next: "下一题",
       result: "看今天的成绩",
       copy: "复制成绩",
       copied: "已复制",
       save: "保存图片",
-      notes: "计分和说明",
+      notes: "怎么玩",
       back: "返回",
       streak: "连续",
       streakNone: "还没有连续天数",
@@ -131,8 +131,8 @@
       same: "五道估算。全世界同一天是同样的五题。",
       reset: "每天 00:00 UTC 换题，也就是北京时间早上 8 点。",
       of: function (i) { return "第 " + (i + 1) + " 题，共 5 题"; },
-      placeholder: "输入一个数字",
-      scaleHint: "越往右，数字涨得越快。以框里的数字为准。",
+      placeholder: "—",
+      scaleHint: "拖动尺子来估。以这个数字为准。",
       badNumber: "请输入一个大于 0 的数字。",
       locked: "已锁定",
       yourFig: "你的数字",
@@ -150,7 +150,7 @@
       source: "来源",
       today: "今天",
       avg: function (f) { return "平均差 " + f + " 倍"; },
-      legend: "条越高，那一题越接近。上面那一块是成绩卡，里面没有答案。",
+      legend: "尺子越满，那一题越接近。上面是可以转发出去的成绩卡，里面没有答案。",
       yourFive: "这五题的答案，只给你自己看",
       tomorrow: "明天的五题在 00:00 UTC 换上，也就是北京时间早上 8 点。",
       played: "今天的正式一轮已经完成。",
@@ -162,12 +162,12 @@
         if (info.cycle <= 0) return "第 " + n + " 套";
         return "第 " + (info.cycle + 1) + " 轮 · 第 " + n + " 套";
       },
-      aboutTitle: "差多少怎么计分",
+      aboutTitle: "差多少怎么玩",
       aboutBody: [
         "同一个 UTC 日期，全世界是同样的五题。换题时间是 00:00 UTC，也就是北京时间早上 8 点。题组从 2026 年 11 月 20 日起，按顺序循环。",
         "每题 20 分，一轮 100 分。差的倍数越大，分越低。正好是 20 分；差 2 倍是 14 分；差 10 倍或更多是 0 分。",
         "每个 UTC 日，这个浏览器只有第一次完成的那一轮算正式成绩，也只有这一轮计入连续天数。连续天数存在这台浏览器里。不用注册。",
-        "成绩卡上有日期、总分、平均差了几倍，以及五道高低条。条越高越接近。成绩卡不含答案。",
+        "成绩卡上有日期、总分、平均差了几倍，以及五条短尺。尺子越满越接近。成绩卡不含答案。",
         "揭晓前重估一次，以及补上错过的一天，都留给以后的激励广告。在广告回调确认看完之前，这两项一直关着。这一版不会假装播过广告。",
         "免广告通行证现在不卖。这个页面不收款。以后的通行证只会关掉广告，不会多给猜测次数。"
       ]
@@ -349,13 +349,18 @@
     return { score: score, avg: L.geometricMean(factors), marks: marks };
   }
 
+  function railMark(b) {
+    var n = Math.max(1, Math.min(5, b || 1));
+    return ["▏", "▎", "▍", "▌", "█"][n - 1];
+  }
+
   function shareText(iso, summary) {
-    var marks = summary.marks.map(L.markChar).join("");
+    var marks = summary.marks.map(railMark).join("  ");
     var f = L.formatFactor(summary.avg);
     if (lang === "zh") {
-      return "差多少 · " + iso + "\n" + summary.score + "/100 · 平均差 " + f + " 倍\n" + marks + "\n条越高越接近。不含答案。";
+      return "差多少 · " + iso + "\n" + summary.score + "/100 · 平均差 " + f + " 倍\n" + marks + "\n尺子越满越接近。不含答案。";
     }
-    return "OffBy · " + iso + "\n" + summary.score + "/100 · " + f + "× off\n" + marks + "\nTaller mark, closer. No answers.";
+    return "OffBy · " + iso + "\n" + summary.score + "/100 · " + f + "× off\n" + marks + "\nFuller rail, closer. No answers.";
   }
 
   function recordFromProgress(p) {
@@ -420,6 +425,8 @@
     if (head) {
       if (!head.hasAttribute("tabindex")) head.tabIndex = -1;
     }
+    syncLockButton();
+    bindRail();
   }
 
   function topbar() {
@@ -440,9 +447,150 @@
 
   function logo() {
     return '<svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true">' +
-      '<path d="M4 23h10M18 9h10" stroke="#1b1714" stroke-width="2.4" fill="none"/>' +
-      '<path d="M16 5v22" stroke="#8c2e22" stroke-width="1.7"/>' +
+      '<rect x="4" y="15" width="24" height="3" rx="1.5" fill="#16201c"/>' +
+      '<rect x="8" y="11" width="8" height="11" rx="2" fill="#c96b1c"/>' +
+      '<rect x="21" y="13" width="4" height="7" rx="0.7" fill="#16201c"/>' +
       '</svg>';
+  }
+
+  function sceneKind(q) {
+    var text = ((q.en || "") + " " + (q.zh || "")).toLowerCase();
+    if (/deep|depth|trench|沟|深|海沟/.test(text)) return "depth";
+    if (/tall|height|high is|how high|tower|mountain|峰|高|塔|山/.test(text)) return "height";
+    if (q.u === "h" || q.u === "d" || q.u === "s" || q.u === "min" || /hour|day|second|minute|year|小时|天|秒|分钟|年/.test(text)) return "time";
+    if (q.u === "km" || q.u === "mm" || q.u === "cm" || /long|length|distance|wide|电缆|长|距离|公里/.test(text)) return "length";
+    return "span";
+  }
+
+  function sceneOrient(kind) {
+    return (kind === "height" || kind === "depth") ? "vert" : "horiz";
+  }
+
+  function sceneSvg(kind) {
+    if (kind === "height") {
+      return '<svg viewBox="0 0 300 250" preserveAspectRatio="xMidYMax meet" aria-hidden="true">' +
+        '<rect x="0" y="198" width="300" height="52" fill="#c5d2cb"/>' +
+        '<rect x="38" y="128" width="52" height="70" rx="6" fill="#9aafA6"/>' +
+        '<rect x="78" y="78" width="44" height="120" rx="6" fill="#7f968c"/>' +
+        '<rect x="150" y="108" width="70" height="90" rx="8" fill="#8ea399"/>' +
+        '</svg>';
+    }
+    if (kind === "depth") {
+      return '<svg viewBox="0 0 300 250" preserveAspectRatio="none" aria-hidden="true">' +
+        '<rect x="0" y="0" width="300" height="46" fill="#c5d2cb"/>' +
+        '<path d="M70 46 V230 H230 V46" fill="none" stroke="#7f968c" stroke-width="10"/>' +
+        '<rect x="90" y="70" width="120" height="18" rx="4" fill="#9aafa6"/>' +
+        '<rect x="104" y="118" width="92" height="14" rx="4" fill="#8ea399"/>' +
+        '<rect x="118" y="164" width="64" height="12" rx="4" fill="#7f968c"/>' +
+        '</svg>';
+    }
+    if (kind === "length") {
+      return '<svg viewBox="0 0 300 214" preserveAspectRatio="none" aria-hidden="true">' +
+        '<path d="M18 150 C 90 108, 150 168, 282 120" fill="none" stroke="#7f968c" stroke-width="8" stroke-linecap="round"/>' +
+        '<circle cx="46" cy="140" r="7" fill="#9aafa6"/>' +
+        '<circle cx="240" cy="128" r="7" fill="#9aafa6"/>' +
+        '</svg>';
+    }
+    if (kind === "time") {
+      return '<svg viewBox="0 0 300 214" preserveAspectRatio="none" aria-hidden="true">' +
+        '<line x1="24" y1="108" x2="276" y2="108" stroke="#7f968c" stroke-width="6" stroke-linecap="round"/>' +
+        '<line x1="24" y1="88" x2="24" y2="128" stroke="#7f968c" stroke-width="5"/>' +
+        '<line x1="108" y1="94" x2="108" y2="122" stroke="#9aafa6" stroke-width="4"/>' +
+        '<line x1="192" y1="94" x2="192" y2="122" stroke="#9aafa6" stroke-width="4"/>' +
+        '<line x1="276" y1="88" x2="276" y2="128" stroke="#7f968c" stroke-width="5"/>' +
+        '</svg>';
+    }
+    return '<svg viewBox="0 0 300 214" preserveAspectRatio="none" aria-hidden="true">' +
+      '<rect x="36" y="44" width="228" height="110" rx="22" fill="none" stroke="#7f968c" stroke-width="8"/>' +
+      '<rect x="68" y="70" width="164" height="58" rx="14" fill="none" stroke="#9aafa6" stroke-width="6"/>' +
+      '</svg>';
+  }
+
+  function pctFromValue(q, n) {
+    if (!n) return 50;
+    var x = L.valueToLog(n, q.min, q.max) * 100;
+    if (x < 0) x = 0;
+    if (x > 100) x = 100;
+    return x;
+  }
+
+  function stageBlock(q, opts) {
+    opts = opts || {};
+    var kind = sceneKind(q);
+    var orient = sceneOrient(kind);
+    var unset = opts.unset ? " is-unset" : "";
+    var guessPct = opts.guess == null ? 50 : pctFromValue(q, opts.guess);
+    var html =
+      '<div class="stage' + unset + '" id="stage" data-kind="' + kind + '" data-orient="' + orient + '" style="--pos:' + guessPct + '%">' +
+        '<div class="stage-art">' + sceneSvg(kind) + '</div>' +
+        '<div class="wash" aria-hidden="true"></div>' +
+        '<div class="hair" aria-hidden="true"></div>' +
+        '<div class="rail" id="rail" role="presentation"></div>' +
+        '<div class="clip" aria-hidden="true"></div>';
+    if (opts.truth != null) {
+      var truthPct = pctFromValue(q, opts.truth);
+      html +=
+        '<div class="wash truth" style="--pos:' + truthPct + '%" aria-hidden="true"></div>' +
+        '<div class="hair truth" style="--pos:' + truthPct + '%" aria-hidden="true"></div>' +
+        '<div class="clip truth" style="--pos:' + truthPct + '%" aria-hidden="true"></div>';
+    }
+    html += '</div>';
+    return html;
+  }
+
+  var railCleanup = null;
+
+  function bindRail() {
+    if (railCleanup) {
+      railCleanup();
+      railCleanup = null;
+    }
+    var stage = document.getElementById("stage");
+    var scale = document.getElementById("scale");
+    if (!stage || !scale || scale.disabled) return;
+    var rail = document.getElementById("rail") || stage;
+    var dragging = false;
+
+    function applyT(ev) {
+      var vert = stage.getAttribute("data-orient") === "vert";
+      var depth = stage.getAttribute("data-kind") === "depth";
+      var r = rail.getBoundingClientRect();
+      var t = ev.touches ? ev.touches[0] : ev;
+      var t01;
+      if (vert) {
+        t01 = (r.bottom - t.clientY) / r.height;
+        if (depth) t01 = (t.clientY - r.top) / r.height;
+      } else {
+        t01 = (t.clientX - r.left) / r.width;
+      }
+      if (t01 < 0) t01 = 0;
+      if (t01 > 1) t01 = 1;
+      scale.value = String(Math.round(t01 * 1000));
+      scale.dispatchEvent(new Event("input", { bubbles: true }));
+    }
+
+    function onDown(ev) {
+      dragging = true;
+      ev.preventDefault();
+      applyT(ev);
+    }
+    function onMove(ev) {
+      if (!dragging) return;
+      ev.preventDefault();
+      applyT(ev);
+    }
+    function onUp() { dragging = false; }
+
+    stage.addEventListener("pointerdown", onDown);
+    window.addEventListener("pointermove", onMove);
+    window.addEventListener("pointerup", onUp);
+    window.addEventListener("pointercancel", onUp);
+    railCleanup = function () {
+      stage.removeEventListener("pointerdown", onDown);
+      window.removeEventListener("pointermove", onMove);
+      window.removeEventListener("pointerup", onUp);
+      window.removeEventListener("pointercancel", onUp);
+    };
   }
 
   function renderLanding() {
@@ -471,19 +619,25 @@
     }
     return (
       '<div class="view">' + topbar() +
-        '<p class="kicker">' + esc(c.setLabel(inf)) + '</p>' +
-        '<h1 class="mast">' + esc(c.brand) + '</h1>' +
-        '<p class="subname">' + esc(c.other) + '</p>' +
-        '<hr class="rule">' +
-        '<p class="dateline">' + esc(formatDate(todayIso())) + '</p>' +
-        '<p class="lede">' + esc(c.same) + '</p>' +
-        '<p class="note">' + esc(c.reset) + '</p>' +
+        '<div class="home-hero">' +
+          '<div class="stage home-stage" data-orient="horiz" style="--pos:58%" aria-hidden="true">' +
+            '<div class="stage-art">' + sceneSvg("height") + '</div>' +
+            '<div class="wash" style="--pos:58%"></div>' +
+            '<div class="hair" style="--pos:58%"></div>' +
+            '<div class="rail"></div>' +
+            '<div class="clip" style="--pos:58%"></div>' +
+            '<div class="clip truth" style="--pos:72%"></div>' +
+          '</div>' +
+          '<h1>' + esc(c.brand) + '</h1>' +
+          '<p class="home-other">' + esc(c.other) + '</p>' +
+          '<p class="home-date">' + esc(formatDate(todayIso())) + '</p>' +
+        '</div>' +
         extra +
         '<div class="stack">' +
           '<button class="btn primary" id="primary-action" type="button" data-act="' + act + '">' + esc(primary) + '</button>' +
           freeze +
         '</div>' +
-        '<p class="note">' + esc(streakLine) + '. ' + esc(c.oneRun) + '</p>' +
+        '<p class="note">' + esc(streakLine) + '</p>' +
         '<button class="btn textish" type="button" data-act="about">' + esc(c.notes) + '</button>' +
       '</div>'
     );
@@ -507,18 +661,17 @@
       '<div class="view">' + topbar() +
         '<div class="meta"><span>' + esc(c.of(p.index)) + '</span><span>' + esc(t().setLabel(info())) + '</span></div>' +
         '<h1 class="q">' + esc(lang === "zh" ? q.zh : q.en) + '</h1>' +
-        '<div class="guess-row">' +
+        stageBlock(q, { unset: !!unset, guess: draftN || null }) +
+        '<input class="sr-only" id="scale" type="range" min="0" max="1000" step="1" value="' + scaleVal + '" aria-valuetext="' + esc(draftN ? p.draft : c.placeholder) + '">' +
+        '<div class="live">' +
           '<input class="guess" id="guess" inputmode="decimal" autocomplete="off" enterkeyhint="done" placeholder="' + esc(c.placeholder) + '" aria-label="' + esc(c.placeholder) + '" value="' + esc(p.draft || "") + '">' +
           (u ? '<span class="unit">' + esc(u) + '</span>' : '') +
         '</div>' +
+        '<div class="ends"><span>' + esc(formatBound(q.min)) + '</span><span>' + esc(formatBound(q.max)) + '</span></div>' +
         '<p class="field-error" id="field-error">' + esc(fieldError) + '</p>' +
-        '<div class="scale-wrap">' +
-          '<input class="scale' + unset + '" id="scale" type="range" min="0" max="1000" step="1" value="' + scaleVal + '" aria-valuetext="' + esc(draftN ? p.draft : c.placeholder) + '">' +
-          '<div class="ends"><span>' + esc(formatBound(q.min)) + '</span><span>' + esc(formatBound(q.max)) + '</span></div>' +
-        '</div>' +
         '<p class="hint">' + esc(c.scaleHint) + '</p>' +
         '<div class="stack">' +
-          '<button class="btn primary" id="primary-action" type="button" data-act="lock" disabled>' + esc(c.lock) + '</button>' +
+          '<button class="btn primary" id="primary-action" type="button" data-act="lock"' + (draftN ? "" : " disabled") + '>' + esc(c.lock) + '</button>' +
         '</div>' +
       '</div>'
     );
@@ -545,6 +698,8 @@
     return (
       '<div class="view">' + topbar() +
         '<div class="meta"><span>' + esc(c.of(p.index)) + '</span><span>' + esc(c.locked) + '</span></div>' +
+        '<h1 class="q">' + esc(lang === "zh" ? q.zh : q.en) + '</h1>' +
+        stageBlock(q, { guess: p.lockedGuess }) +
         '<p class="true-label">' + esc(c.yourFig) + '</p>' +
         '<p class="locked-num">' + esc(formatFlex(p.lockedGuess)) + (u ? " " + esc(u) : "") + '</p>' +
         '<div class="stack">' +
@@ -569,9 +724,14 @@
       '<div class="view">' + topbar() +
         '<div class="meta"><span>' + esc(c.of(p.index)) + '</span><span>' + esc(c.pts(row.points)) + '</span></div>' +
         '<h1 class="q">' + esc(lang === "zh" ? q.zh : q.en) + '</h1>' +
+        stageBlock(q, { guess: row.guess, truth: q.a }) +
         '<p class="true-label">' + esc(c.trueValue) + '</p>' +
         '<p class="locked-num">' + esc(formatNum(q.a, q.dp)) + (u ? " " + esc(u) : "") + '</p>' +
-        '<p class="note">' + esc(c.youSaid) + " " + esc(formatFlex(row.guess)) + (u ? " " + esc(u) : "") + ". " + esc(how) + ".</p>" +
+        (function () {
+          var stop = lang === "zh" ? "。" : ". ";
+          var end = lang === "zh" ? "。" : ".";
+          return '<p class="note">' + esc(c.youSaid) + " " + esc(formatFlex(row.guess)) + (u ? " " + esc(u) : "") + stop + esc(how) + end + "</p>";
+        })() +
         '<div class="score-row"><p class="pts">' + row.points + ' <span>/ 20</span></p></div>' +
         '<p class="source">' + esc(note) + ' <a href="' + esc(src.url) + '" target="_blank" rel="noopener">' + esc(c.source) + '</a></p>' +
         '<div class="stack">' +
@@ -594,8 +754,8 @@
     var summary = { score: rec.score, avg: rec.avg, marks: rec.marks };
     var text = shareText(iso, summary);
     var bars = rec.marks.map(function (b) {
-      var h = 14 + b * 11;
-      return '<i style="height:' + h + 'px"></i>';
+      var w = 18 + b * 16.4;
+      return '<b><i style="width:' + w + '%"></i></b>';
     }).join("");
     var copyLabel = Date.now() < copiedUntil ? c.copied : c.copy;
     var streak = shownStreak();
@@ -623,7 +783,7 @@
         '<p class="kicker">' + esc(formatDate(iso)) + '</p>' +
         '<h1 class="big-score">' + rec.score + '<small> / 100</small></h1>' +
         '<p class="lede">' + esc(c.avg(L.formatFactor(rec.avg))) + '</p>' +
-        '<div class="bars" aria-hidden="true">' + bars + '</div>' +
+        '<div class="rails" aria-hidden="true">' + bars + '</div>' +
         '<p class="hint">' + esc(c.legend) + '</p>' +
         '<pre class="sharebox" id="share-text">' + esc(text) + '</pre>' +
         '<div class="stack">' +
@@ -679,6 +839,11 @@
         scale.classList.remove("is-unset");
         scale.value = String(Math.round(L.valueToLog(n, q.min, q.max) * 1000));
         scale.setAttribute("aria-valuetext", e.target.value);
+        var stage = document.getElementById("stage");
+        if (stage) {
+          stage.classList.remove("is-unset");
+          stage.style.setProperty("--pos", pctFromValue(q, n) + "%");
+        }
       }
       writeProgress(p);
       syncLockButton();
@@ -697,6 +862,11 @@
       p2.draft = text;
       e.target.setAttribute("aria-valuetext", text);
       fieldError = "";
+      var stage = document.getElementById("stage");
+      if (stage) {
+        stage.classList.remove("is-unset");
+        stage.style.setProperty("--pos", pctFromValue(q2, shown) + "%");
+      }
       writeProgress(p2);
       syncLockButton();
     }
@@ -881,49 +1051,62 @@
     var c = document.createElement("canvas");
     var w = 360;
     var h = 480;
-    var s = 2;
-    c.width = w * s;
-    c.height = h * s;
+    var s2 = 2;
+    c.width = w * s2;
+    c.height = h * s2;
     var g = c.getContext("2d");
-    g.scale(s, s);
-    g.fillStyle = "#f3eee4";
+    g.scale(s2, s2);
+    g.fillStyle = "#eef3f0";
     g.fillRect(0, 0, w, h);
-    g.strokeStyle = "#1b1714";
-    g.lineWidth = 1;
-    g.strokeRect(14, 14, w - 28, h - 28);
-    g.strokeRect(18, 18, w - 36, h - 36);
-    g.fillStyle = "#1b1714";
-    g.font = "600 40px Georgia, 'Songti SC', 'WenQuanYi Micro Hei', serif";
-    g.fillText(lang === "zh" ? "差多少" : "OffBy", 36, 78);
-    g.font = "15px Georgia, 'WenQuanYi Micro Hei', serif";
-    g.fillStyle = "#4a453c";
-    g.fillText(lang === "zh" ? "OffBy" : "差多少", 36, 102);
-    g.fillStyle = "#1b1714";
-    g.font = "16px -apple-system, 'PingFang SC', 'WenQuanYi Micro Hei', sans-serif";
-    g.fillText(iso, 36, 138);
-    g.font = "600 78px Georgia, 'Songti SC', 'WenQuanYi Micro Hei', serif";
+    g.fillStyle = "#dce6e1";
+    roundRect(g, 22, 22, w - 44, h - 44, 22);
+    g.fill();
+    g.fillStyle = "#16201c";
+    g.font = "700 34px 'Avenir Next', 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', sans-serif";
+    g.fillText(lang === "zh" ? "差多少" : "OffBy", 44, 78);
+    g.font = "15px -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', sans-serif";
+    g.fillStyle = "#5b6a63";
+    g.fillText(lang === "zh" ? "OffBy" : "差多少", 44, 102);
+    g.fillText(iso, 44, 128);
+    g.fillStyle = "#16201c";
+    g.font = "700 82px 'Avenir Next', 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', sans-serif";
     var scoreText = String(rec.score);
     var scoreW = g.measureText(scoreText).width;
-    g.fillText(scoreText, 36, 230);
-    g.font = "22px Georgia, 'WenQuanYi Micro Hei', serif";
-    g.fillStyle = "#4a453c";
-    g.fillText("/ 100", 36 + scoreW + 12, 230);
-    g.fillStyle = "#1b1714";
+    g.fillText(scoreText, 44, 228);
+    g.font = "600 22px 'Avenir Next', 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', sans-serif";
+    g.fillStyle = "#5b6a63";
+    g.fillText("/ 100", 44 + scoreW + 10, 228);
     var f = L.formatFactor(rec.avg);
-    g.font = "20px Georgia, 'PingFang SC', 'WenQuanYi Micro Hei', serif";
-    g.fillText(lang === "zh" ? ("平均差 " + f + " 倍") : (f + "× off, on average"), 36, 268);
+    g.font = "18px -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', sans-serif";
+    g.fillStyle = "#16201c";
+    g.fillText(lang === "zh" ? ("平均差 " + f + " 倍") : (f + "× off, on average"), 44, 266);
     for (var i = 0; i < 5; i++) {
-      var bh = 16 + rec.marks[i] * 22;
-      var x = 36 + i * 58;
-      var y = 400 - bh;
-      g.fillStyle = "#1b1714";
-      g.fillRect(x, y, 40, bh);
+      var y = 300 + i * 26;
+      g.fillStyle = "#c5d2cb";
+      roundRect(g, 44, y, 272, 12, 6);
+      g.fill();
+      var tw = 48 + rec.marks[i] * 44.8;
+      g.fillStyle = "#c96b1c";
+      roundRect(g, 44, y, tw, 12, 6);
+      g.fill();
     }
-    g.fillStyle = "#4a453c";
-    g.font = "14px -apple-system, 'PingFang SC', 'WenQuanYi Micro Hei', sans-serif";
-    var foot = lang === "zh" ? "条越高越接近 · 不含答案 · 00:00 UTC" : "Taller mark, closer · no answers · 00:00 UTC";
-    g.fillText(foot, 36, 440);
+    g.fillStyle = "#5b6a63";
+    g.font = "14px -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', sans-serif";
+    var foot = lang === "zh" ? "尺子越满越接近 · 不含答案" : "Fuller rail, closer · no answers";
+    g.fillText(foot, 44, 440);
     return c;
+  }
+
+  function roundRect(g, x, y, w, h, r) {
+    if (w < 2 * r) r = w / 2;
+    if (h < 2 * r) r = h / 2;
+    g.beginPath();
+    g.moveTo(x + r, y);
+    g.arcTo(x + w, y, x + w, y + h, r);
+    g.arcTo(x + w, y + h, x, y + h, r);
+    g.arcTo(x, y + h, x, y, r);
+    g.arcTo(x, y, x + w, y, r);
+    g.closePath();
   }
 
   var OffByRewards = {
